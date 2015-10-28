@@ -9,6 +9,7 @@ Hint:
 
 If there are 5 stones in the heap, could you figure out a way to remove the stones such that you will always be the winner?*/
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 bool canWinNim(int n) {
@@ -17,7 +18,9 @@ bool canWinNim(int n) {
 
 int main()
 {
-	cin >> "n";
+	ifstream infile("data.txt");
+	int n;
+	infile >> n;
 	if(canWinNim(n)) cout << "You can win!" << endl;
 	else cout << "You can't win!" << endl;
 	return 0;
